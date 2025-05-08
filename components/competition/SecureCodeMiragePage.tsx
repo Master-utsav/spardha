@@ -82,7 +82,7 @@ const SecureCodeMiragePage = ({
   useSecurityProtection();
   const { FullscreenModal, showModal, enableFullScreen } =
     useFullscreenControl();
-  // const { isScreenshotAttempted } = useScreenshotProtection();
+  const { isScreenshotAttempted } = useScreenshotProtection();
 
   useEffect(() => {
     enableFullScreen();
@@ -377,7 +377,7 @@ const SecureCodeMiragePage = ({
 
   return (
     <>
-      {/* {isScreenshotAttempted && (
+      {isScreenshotAttempted && (
         <div className="relative my-20 h-screen w-full items-start justify-center">
           <Alert variant="destructive" className="z-[1200] w-full">
             <AlertTriangle className="size-5" />
@@ -387,7 +387,7 @@ const SecureCodeMiragePage = ({
             </AlertDescription>
           </Alert>
         </div>
-      )} */}
+      )}
       <FullscreenModal />
       <div className="fixed inset-0 top-28 z-20 mx-auto mb-0 flex w-full flex-col items-start justify-center gap-1 overflow-hidden rounded-b-xl border border-gray-300 bg-white px-3 py-1 shadow-lg dark:border-gray-700 dark:bg-navy-blue sm:top-14">
         <div className="flex w-full items-center justify-between">
