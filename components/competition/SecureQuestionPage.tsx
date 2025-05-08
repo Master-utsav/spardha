@@ -84,7 +84,7 @@ const SecureQuestionPage = ({
   useSecurityProtection();
   const { FullscreenModal, showModal, enableFullScreen } =
     useFullscreenControl();
-  const { isScreenshotAttempted } = useScreenshotProtection();
+  // const { isScreenshotAttempted } = useScreenshotProtection();
 
   useEffect(() => {
     enableFullScreen();
@@ -384,7 +384,7 @@ const SecureQuestionPage = ({
 
   return (
     <>
-      {isScreenshotAttempted && (
+      {/* {isScreenshotAttempted && (
         <div className="relative my-20 h-screen w-full items-start justify-center">
           <Alert variant="destructive" className="z-[1200] w-full">
             <AlertTriangle className="size-5" />
@@ -394,7 +394,7 @@ const SecureQuestionPage = ({
             </AlertDescription>
           </Alert>
         </div>
-      )}
+      )} */}
       {(competition === 'code-clash' || competition === 'bug-bash') && (
         <>
           <FullscreenModal />
